@@ -1,0 +1,51 @@
+
+.App{
+ background-color: #141414;
+ color: #ffffff;
+} 
+
+img {
+  pointer-events: none;
+}
+
+.carousel {
+  align-self: center;
+}
+ .wrapper{
+  align-self: center;
+  margin-left: 200px;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+.movie-card{
+  padding: 0 !important;
+  width: 80%;
+  height: 600px;
+  margin:14px; 
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+  align-self: center;
+}
+
+.movie-card img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 25rem;
+}
+
+.movie-info{
+  color: #5e5c5c;
+}
+
+.movie-info i{
+  font-size: 20px;
+}
+.card-title{
+  width: 80%;
+  height: 4rem;
+  color:#413f3f;
+  align-content: center;
+  
+}
+
