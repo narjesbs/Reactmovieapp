@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import {Navbar,Container,Nav} from 'react-bootstrap';
+import StarRatingComponent from 'react-star-rating-component';
+
 import Popcorn from "./Popcorn.png"
 import AddMovie from './newMovie';
 import FilterMovie from './filter';
-import StarRatingComponent from 'react-star-rating-component';
 
 function Navigation ({movies,setMovies,setSearch,setStarrating}){
     const onStarClick = (newRating) => {
@@ -19,6 +21,8 @@ function Navigation ({movies,setMovies,setSearch,setStarrating}){
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+                <Nav.Link as={Link} to='/'>Home</Nav.Link>
+                <Nav.Link as={Link} to='/Movies'>Movies</Nav.Link>
                 <FilterMovie setSearch={setSearch} />
                 <AddMovie movies={movies} setMovies={setMovies} />
                 <StarRatingComponent 
@@ -27,7 +31,7 @@ function Navigation ({movies,setMovies,setSearch,setStarrating}){
                     onChange={onStarClick}
                     starColor={'#ffc107'} 
                     emptyStarColor={'#e4e5e9'} 
-        />
+                />
             </Nav>
             </Navbar.Collapse>
         </Container>

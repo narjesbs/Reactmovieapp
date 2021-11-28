@@ -10,12 +10,12 @@ function MovieList ({movies,search,starRating})  {
 			<Carousel>
 				
 			{ 
-                movies.filter(el => el.Title.toUpperCase().includes(search.toUpperCase().trim()) 
-								 && el.Rating <= starRating 
+                movies.filter(movie => movie.Title.toUpperCase().includes(search.toUpperCase().trim()) 
+								 && movie.Rating <= starRating 
 							 )
-						.map((el) => ( 
+						.map((movie) => ( 
 							<Carousel.Item interval={1000}>
-							<MovieCard  el = {el} />
+							<MovieCard  movie = {movie} key={movie.id} />
 							</Carousel.Item>
 						 )
 						)				

@@ -1,5 +1,7 @@
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
+import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 import '../App.css';
 
 function MovieCard ({el})  {
@@ -9,8 +11,10 @@ function MovieCard ({el})  {
 		        <div className="card-body">
 		            <h5 className="card-title">{el.Title}
 					<StarRatingComponent value= {el.Rating}/>
+					<Link  to={`/AboutPage/${el.id}`}  >   
+						<Button variant="primary">Go somewhere</Button>
+					</Link>
 					</h5>
-		   		    <span className="movie-info">{el.Description}</span>
 				</div>
 		    </div>
 	);
