@@ -6,6 +6,7 @@ function AboutPage(props) {
     
     return(
         <div className='wrapper'>
+            <h5 className="card-title">{Movie.Title}</h5>
             <p className="movie-info">{Movie.Description}</p>
             <iframe width="727" height="409" src={Movie.Trailer} title="YouTube video player" frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
