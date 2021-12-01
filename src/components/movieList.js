@@ -8,10 +8,9 @@ function MovieList ({movies,search,starRating})  {
 	return (
 		<div className= "wrapper">
 			<Carousel>
-				
 			{ 
                 movies.filter(movie => movie.Title.toUpperCase().includes(search.toUpperCase().trim()) 
-								 && movie.Rating <= starRating 
+								 /*&& movie.Rating <= starRating*/ 
 							 )
 						.map((movie) => ( 
 							<Carousel.Item interval={1000}>

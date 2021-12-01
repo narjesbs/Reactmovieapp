@@ -18,7 +18,7 @@ function AddMovie({movies,setMovies}) {
 
     return (
         <div>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="secondary" onClick={handleShow} style={{width:'75px', fontSize:'15px' }}>
               New Movie
             </Button>
             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>
@@ -61,7 +61,7 @@ function AddMovie({movies,setMovies}) {
                 <Button variant="secondary" onClick={handleClose}>
                   Close
                 </Button>
-                <Button variant="primary" type = "submit" onClick= {add}>Add the Movie</Button>
+                <Button variant="secondary" type = "submit" onClick= {add}>Add the Movie</Button>
               </Modal.Footer>
             </Modal>
         </div>

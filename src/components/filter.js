@@ -6,7 +6,7 @@ function FilterMovie({setSearch}){
     return(
         <div>
             <Form className="d-flex">
-                <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" 
+                <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" style={{width:"180px"}} 
                              onChange={ e => setSearch(e.target.value)} />
             </Form>
         </div>

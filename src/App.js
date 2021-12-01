@@ -1,12 +1,12 @@
 import React, { useState} from 'react';
-import { Route } from 'react-router';
+import { Route } from "react-router-dom";
 
 import Home from './components/home.js';
 import MovieList from './components/movieList.js';
 import Navigation from './components/navigation.js';
 import AboutPage from './components/movieAbout.js';
 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 function App () {  
@@ -65,10 +65,10 @@ function App () {
 	return (
 		<div className='App'>
       <Navigation movies={movies} setMovies={setMovies} setSearch={setSearch} setStarrating={setStarrating} />
-        <Route exact path='/' component={Home} />
-        <Route path='/Movies' render={()=> <MovieList movies={movies} search={search} starRating={starRating} /> } />
-        <Route path='/AboutPage/:' render={(props)=><AboutPage movies={movies} {...props} /> } />
-		</div>
+      <Route exact path="/" ><Home /> </Route>
+      <Route path='/Movies' render={()=> <MovieList movies={movies} search={search} starRating={starRating} /> } />
+      <Route path='/AboutPage/:id' render={(props)=><AboutPage movies={movies} {...props} /> } />
+    </div>
 	);
 }
 

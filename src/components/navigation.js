@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import {Navbar,Container,Nav} from 'react-bootstrap';
 import StarRatingComponent from 'react-star-rating-component';
 
@@ -20,9 +20,9 @@ function Navigation ({movies,setMovies,setSearch,setStarrating}){
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-                <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                <Nav.Link as={Link} to='/Movies'>Movies</Nav.Link>
+            <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px',color:'white' }} navbarScroll>
+                <Nav.Link as={Link} to='/' style={{ color:'white'}}>Home</Nav.Link>
+                <Nav.Link as={Link} to='/Movies' style={{ color:'white'}}>Movies</Nav.Link>
                 <FilterMovie setSearch={setSearch} />
                 <AddMovie movies={movies} setMovies={setMovies} />
                 <StarRatingComponent 
